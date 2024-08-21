@@ -56,7 +56,7 @@ def matrix_prob(dimension = 10, initial_value = 1, position_initial = (1, 1)):
         for i in range(x_initial - 1, -1, -1):
             data_matrix[i, y_initial] = data_matrix[i + 1, y_initial] + 1
 
-  # Octavo paso. Llenar el resto de la matriz, incluyendo los valores menores solo si la condición se cumple
+  # Octavo paso. Llenar el resto de la matriz, incluyendo los valores menores solo si la condicion se cumple
     for i in range(dimension):
         for j in range(dimension):
             if data_matrix[i, j] == 0:
