@@ -66,5 +66,4 @@ def matrix_prob(dimension = 10, initial_value = 1, position_initial = (1, 1)):
                     data_matrix[i, j] = data_matrix[i - 1, j - 1]
                 elif (i < x_initial or j < y_initial) and (x_initial > 0 or y_initial > 0):
                     data_matrix[i, j] = data_matrix[x_initial, y_initial] - abs(x_initial - i) - abs(y_initial - j)
-
     return data_matrix
