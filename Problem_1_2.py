@@ -9,7 +9,7 @@ import numpy as np
     inicial del valor inicial. 
     '''
 
-def matrix_prob(dimension = 10, initial_value = 1, position_initial = (1, 1)):
+def matrix_prob(dimension = 10, initial_value = 1, initial_positio = (1, 1)):
   """
     Generadora de matrices que poseen cada elemento posee la siguiente condicion
     vx_i,j+1 = x_i,j + 1 y x_i+1,j = x_i,h - 1
@@ -30,8 +30,8 @@ def matrix_prob(dimension = 10, initial_value = 1, position_initial = (1, 1)):
     
   # Segundo paso. Se ajustan los indices de la posicion inicial.
   # Nota se puede resta una unidad ya que python se comienza del 0 y no del 1.
-  x_initial = position_initial[0] - 1
-  y_initial = position_initial[1] - 1
+  x_initial = initial_positio[0] - 1
+  y_initial = initial_positio[1] - 1
       
   # Tercer paso. Asigna el valor inicial en la posicion deseada.
   data_matrix[x_initial, y_initial] = data_initial
@@ -67,3 +67,16 @@ def matrix_prob(dimension = 10, initial_value = 1, position_initial = (1, 1)):
                 elif (i < x_initial or j < y_initial) and (x_initial > 0 or y_initial > 0):
                     data_matrix[i, j] = data_matrix[x_initial, y_initial] - abs(x_initial - i) - abs(y_initial - j)
     return data_matrix
+
+
+# Problem 1
+
+matrix_generada_problem_1 = matrix_prob(10, 1, (1, 1))
+
+print(matrix_generada_problem_1)
+
+# Problem 2
+
+matrix_generada_problem_2 = matrix_prob(250, 1, (1, 1))
+
+print(matrix_generada_problem_2)
